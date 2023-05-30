@@ -4,7 +4,7 @@ require('../models');
 
 let genreId;
 
-test('POST /genres || estatus y que el id este definido', async () => {
+test('POST /genres || estatus 201 y que el id este definido', async () => {
     const newGenre = {
         name: "Accion"
     }

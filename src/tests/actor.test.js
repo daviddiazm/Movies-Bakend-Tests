@@ -4,7 +4,7 @@ require('../models');
 
 let actorId;
 
-test('POST /actors || estatus y que el id este definido', async () => {
+test('POST /actors || estatus 201 y que el id este definido', async () => {
     const newActor = {
         firstName: "David",
         lastName: "Diaz",

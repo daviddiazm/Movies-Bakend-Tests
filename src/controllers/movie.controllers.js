@@ -53,7 +53,7 @@ const setMoviesActors = catchError(async(req, res) => {
     const { id } = req.params;
     const movie = await Movie.findByPk(id);
     await movie.setActors(req.body);
-    const actors = movie.getActors();
+    const actors = await movie.getActors();
     return res.json(actors)
 })
 
@@ -61,7 +61,7 @@ const setMoviesDirectors = catchError( async (req, res) => {
     const { id } = req.params;
     const movie = await Movie.findByPk(id);
     await movie.setDirectors(req.body);
-    const directors = movie.getDirectors();
+    const directors = await movie.getDirectors();
     return res.json(directors);
 })
 
